@@ -46,6 +46,15 @@ class TracksViewController: UIViewController, UITableViewDataSource {
                 // Create a JSON Decoder
                 let decoder = JSONDecoder()
 
+                // Create a date formatter
+                let dateFormatter = DateFormatter()
+
+                // Set a custom date format based on what we see coming back in the JSON
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+                // Set the decoding strategy on the JSON decoder to use our custom date format
+                decoder.dateDecodingStrategy = .formatted(dateFormatter)
+                
                 // Use the JSON decoder to try and map the data to our custom model.
                 // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
                 let response = try decoder.decode(TracksResponse.self, from: data)
