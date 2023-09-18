@@ -252,7 +252,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UbG-Ez-7Wk" customClass="AlbumCell" customModule="lab_tunley" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="UbG-Ez-7Wk" customClass="AlbumCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="135"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Fx7-dh-KvL">
@@ -294,6 +294,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ldt-zh-9H5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Jqk-67-9C3" id="lhP-2Y-Fyb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPW-Wn-9VJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
